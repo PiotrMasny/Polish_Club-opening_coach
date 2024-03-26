@@ -1,54 +1,48 @@
-CARDS = {
-    '2 Clubs': 0,
-    '3 Clubs': 1,
-    '4 Clubs': 2,
-    '5 Clubs': 3,
-    '6 Clubs': 4,
-    '7 Clubs': 5,
-    '8 Clubs': 6,
-    '9 Clubs': 7,
-    'T Clubs': 8,
-    'Jack of Clubs': 9,
-    'Queen of Clubs': 10,
-    'King of Clubs': 11,
-    'Ace of Clubs': 12,
-    '2 Diamonds': 0,
-    '3 Diamonds': 1,
-    '4 Diamonds': 2,
-    '5 Diamonds': 3,
-    '6 Diamonds': 4,
-    '7 Diamonds': 5,
-    '8 Diamonds': 6,
-    '9 Diamonds': 7,
-    'T Diamonds': 8,
-    'Jack of Diamonds': 9,
-    'Queen of Diamonds': 10,
-    'King of Diamonds': 11,
-    'Ace of Diamonds': 12,
-    '2 Hearts': 0,
-    '3 Hearts': 1,
-    '4 Hearts': 2,
-    '5 Hearts': 3,
-    '6 Hearts': 4,
-    '7 Hearts': 5,
-    '8 Hearts': 6,
-    '9 Hearts': 7,
-    'T Hearts': 8,
-    'Jack of Hearts': 9,
-    'Queen of Hearts': 10,
-    'King of Hearts': 11,
-    'Ace of Hearts': 12,
-    '2 Spades': 0,
-    '3 Spades': 1,
-    '4 Spades': 2,
-    '5 Spades': 3,
-    '6 Spades': 4,
-    '7 Spades': 5,
-    '8 Spades': 6,
-    '9 Spades': 7,
-    'T Spades': 8,
-    'Jack of Spades': 9,
-    'Queen of Spades': 10,
-    'King of Spades': 11,
-    'Ace of Spades': 12
+CARDS_WITH_NO_COLOR = {
+    '2': {
+        'priority': 0,
+    },
+    '3': {
+        'priority': 1
+    },
+    '4': {
+        'priority': 2
+    },
+    '5': {
+        'priority': 3
+    },
+    '6': {
+        'priority': 4
+    },
+    '7': {
+        'priority': 5
+    },
+    '8': {
+        'priority': 6
+    },
+    '9': {
+        'priority': 7
+    },
+    'T': {
+        'priority': 8
+    },
+    'J': {
+        'priority': 9
+    },
+    'Q': {
+        'priority': 10
+    },
+    'K': {
+        'priority': 11
+    },
+    'A': {
+        'priority': 12
+    },
 }
+
+COLORS = ['C', 'D', 'H', 'S']
+
+CARDS = {}
+for card in CARDS_WITH_NO_COLOR:
+    for color in COLORS:
+        CARDS[card + ' ' + color] = CARDS_WITH_NO_COLOR[card]
